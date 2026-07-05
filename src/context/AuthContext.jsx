@@ -5,8 +5,17 @@ const AuthContext = createContext();
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
 
-  const login = (email) => {
-    setUser({ email });
+  const login = (email, password) => {
+    // fake validation
+    if (!email || !password) return false;
+
+    const fakeUser = {
+      email,
+      name: "Imara User",
+    };
+
+    setUser(fakeUser);
+    return true;
   };
 
   const logout = () => {

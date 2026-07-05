@@ -8,6 +8,9 @@ import Reviews from "./pages/Reviews";
 import Specifications from "./pages/Specifications";
 import Cart from "./pages/Cart";
 import Navbar from "./components/Navbar";
+import Login from "./pages/Login";
+import Checkout from "./pages/Checkout";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -27,6 +30,16 @@ function App() {
           />
         </Route>
         <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
+
+<Route
+  path="/checkout"
+  element={
+    <ProtectedRoute>
+      <Checkout />
+    </ProtectedRoute>
+  }
+/>
       </Routes>
     </BrowserRouter>
   );

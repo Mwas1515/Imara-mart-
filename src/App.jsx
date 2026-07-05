@@ -6,6 +6,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Overview from "./pages/Overview";
 import Reviews from "./pages/Reviews";
 import Specifications from "./pages/Specifications";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             element={<Specifications />}
           />
         </Route>
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </BrowserRouter>
   );

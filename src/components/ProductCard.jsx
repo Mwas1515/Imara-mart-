@@ -1,6 +1,9 @@
+import { useCart } from "../context/CartContext";
 import { Link } from "react-router-dom";
 
 function ProductCard({ product }) {
+  const { addToCart } = useCart();
+
   return (
     <div className="border rounded-lg shadow p-4 hover:shadow-lg transition duration-300">
       <img
@@ -21,17 +24,21 @@ function ProductCard({ product }) {
         ${product.price}
       </p>
 
-<Link to={`/products/${product.id}`}>
-  <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
-    View Details
-  </button>
-</Link>
-<button
-  onClick={() => addToCart(product)}
-  className="mt-4 w-full bg-blue-600 text-white py-2 rounded"
->
-  Add to Cart
-</button>
+      <div className="flex flex-col gap-2 mt-4">
+        <button
+          onClick={() => {console.log("Cart clicked:", product);addToCart(product)}}
+          className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition"
+        >
+          Add to Cart
+        </button>
+
+        <Link
+          to={`/products/${product.id}`}
+          className="w-full bg-blue-600 text-white py-2 rounded text-center hover:bg-blue-700 transition"
+        >
+          View Details
+        </Link>
+      </div>
     </div>
   );
 }

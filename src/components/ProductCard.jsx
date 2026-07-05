@@ -26,6 +26,12 @@ function ProductCard({ product }) {
     View Details
   </button>
 </Link>
+<button
+  onClick={() => addToCart(product)}
+  className="mt-4 w-full bg-blue-600 text-white py-2 rounded"
+>
+  Add to Cart
+</button>
     </div>
   );
 }

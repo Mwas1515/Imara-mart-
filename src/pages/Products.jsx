@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import api from "../services/api";
 import ProductCard from "../components/ProductCard";
 import SearchBar from "../components/SearchBar";
+import { useCart } from "../context/CartContext";
 
 function Products() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const fetchProducts = async () => {

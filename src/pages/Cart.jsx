@@ -8,7 +8,7 @@ function Cart() {
   if (cartItems.length === 0) {
     return (
       <div className="text-center mt-20">
-        <h1 className="text-2xl font-bold">Your cart is empty 🛒</h1>
+        <h1 className="text-2xl font-bold">Your cart is empty</h1>
       </div>
     );
   }

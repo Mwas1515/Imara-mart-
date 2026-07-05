@@ -7,10 +7,12 @@ import Overview from "./pages/Overview";
 import Reviews from "./pages/Reviews";
 import Specifications from "./pages/Specifications";
 import Cart from "./pages/Cart";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <BrowserRouter>
+     <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
 

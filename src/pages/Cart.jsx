@@ -1,4 +1,5 @@
 import { useCart } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 function Cart() {
   const { cartItems, removeFromCart, clearCart, totalPrice } = useCart();
@@ -52,18 +53,26 @@ function Cart() {
         ))}
       </div>
 
-      <div className="mt-8 border-t pt-4 flex justify-between items-center">
-        <h2 className="text-xl font-bold">
-          Total: ${totalPrice.toFixed(2)}
-        </h2>
+<div className="mt-8 border-t pt-4 flex justify-between items-center">
+  <h2 className="text-xl font-bold">
+    Total: ${totalPrice.toFixed(2)}
+  </h2>
 
-        <button
-          onClick={clearCart}
-          className="bg-red-600 text-white px-4 py-2 rounded"
-        >
-          Clear Cart
-        </button>
-      </div>
+  <div className="flex gap-3">
+    <button
+      onClick={clearCart}
+      className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
+    >
+      Clear Cart
+    </button>
+
+    <Link to="/checkout">
+      <button className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+        Checkout
+      </button>
+    </Link>
+  </div>
+</div>
     </div>
   );
 }

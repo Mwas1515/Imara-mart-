@@ -11,11 +11,13 @@ import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
 import Checkout from "./pages/Checkout";
 import ProtectedRoute from "./components/ProtectedRoute";
+import { Toaster } from "sonner";
 
 function App() {
   return (
     <BrowserRouter>
      <Navbar />
+      <Toaster />
       <Routes>
         <Route path="/" element={<Home />} />
 

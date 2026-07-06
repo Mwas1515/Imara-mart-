@@ -1,16 +1,112 @@
-# React + Vite
+# Imara-Mart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce web application that allows users to browse products, view product details, search items, add products to a shopping cart, and complete a protected checkout process. It demonstrates real-world e-commerce functionality with state management, routing, and a smooth user experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Display a list of products from an API
+- View detailed product information
+- Search and filter products in real time
+- Add products to shopping cart
+- Remove products from cart
+- Update product quantity in cart
+- Calculate total cart price
+- Protected checkout page (authentication required)
+- Login and logout functionality
+- Responsive user interface
+- Built with reusable React components
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (Vite)
+- React Router DOM
+- Context API
+- Tailwind CSS
+- JavaScript (ES6+)
+- Sonner (toast notifications)
+- Git & GitHub
+
+---
+
+## Project Structure
+```
+├── src/
+│ ├── components/
+│ │ ├── Navbar.jsx
+│ │ ├── ProductCard.jsx
+│ │ ├── ProtectedRoute.jsx
+│ │
+│ ├── context/
+│ │ ├── CartContext.jsx
+│ │ ├── AuthContext.jsx
+│ │
+│ ├── pages/
+│ │ ├── Home.jsx
+│ │ ├── Products.jsx
+│ │ ├── ProductDetails.jsx
+│ │ ├── Cart.jsx
+│ │ ├── Checkout.jsx
+│ │ ├── Login.jsx
+│ │
+│ ├── services/
+│ │ ├── api.js
+│ │
+│ ├── App.jsx
+│ ├── main.jsx
+│ └── index.css
+│
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+├── tailwind.config.js
+└── README.md
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Mwas1515/Imara-mart-.git
+```
+
+Navigate into the project folder:
+```
+cd imara-mart
+```
+
+Install dependencies:
+```
+npm install
+```
+
+Start the development server:
+```
+npm run dev
+```
+
+## Build for Production
+```
+npm run build
+```
+
+## Live Demo
+```
+
+````
+
+## Author
+Denis Mwangi
+
+GitHub: https://github.com/Mwas1515
+
+## License
+
+This project is licensed under the MIT License.

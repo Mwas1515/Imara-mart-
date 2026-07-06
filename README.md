@@ -98,9 +98,9 @@ npm run build
 ```
 
 ## Live Demo
-```
 
-````
+https://imara-mart.vercel.app/
+
 
 ## Author
 Denis Mwangi
@@ -109,4 +109,4 @@ GitHub: https://github.com/Mwas1515
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License
